@@ -14,6 +14,5 @@ public class Car {
 		this.personNum = personNum;
 		this.tonNum = tonNum;
 	}
-	
 
 }
