@@ -3,15 +3,6 @@ import java.util.Scanner;
 
 public class Selecter {
 	Scanner input = new Scanner(System.in);
-
-	public void main(Car[] cars) {
-		int[] nums = new int[10];
-		double dates = 0;
-		this.printChoice(nums, dates);
-		this.sumPrice(cars, nums, dates);
-		this.printTruck(cars, nums);
-		this.printNums(cars, nums);
-	}
 	public void enter(Car c[]) {
 		System.out.println("您是否需要租车？是：1， 否：0");
 		int s1 = input.nextInt();
@@ -32,21 +23,24 @@ public class Selecter {
 	}
 	
 	
-	public void printChoice(int[] nums, double dates) {
+	public int[] nums() {
 		System.out.println("您需要租几辆车？");
 		int s = input.nextInt();
+		int[] nums=new int[10];
 		for(int i=0;i<s;i++) {
 			System.out.println("请输入第"+(i+1)+"辆车的序号");
 			int in = input.nextInt();
 			nums[i]=in;
 		}
+		return nums;
+	}
+	public int date() {
 		System.out.println("请输入你要租的天数?");
 		int in1=input.nextInt();
-		dates = in1;
-		System.out.println("-----"+dates);
+		return in1;
 	}
 	
-	public void sumPrice(Car cars[], int[] nums, double dates) {
+	public void sumPrice(Car cars[], int[] nums, int dates) {
 		int sumPrice=0;
 		for(int i=0;i<nums.length;i++) {
 			if(nums[i]>0) {
