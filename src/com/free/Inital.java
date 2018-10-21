@@ -8,7 +8,7 @@ public class Inital {
 		Selecter s=new Selecter();
 		s.enter(cars);
 		s.printChoice();
-		s.sumPrice(cars);`
+		s.sumPrice(cars);
 		s.printTruck(cars);
 		
 		s.printNums(cars);
